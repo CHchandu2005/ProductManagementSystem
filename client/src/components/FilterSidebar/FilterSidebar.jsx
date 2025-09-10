@@ -20,11 +20,6 @@ const FilterSidebar = ({
 
   return (
     <>
-      {/* <button className={styles.mobileMenuToggle} onClick={onToggle}>
-        ☰ Filters & Sort
-      </button> */}
-      
-      {/* Mobile overlay */}
       <div 
         className={`${styles.sidebarOverlay} ${isOpen ? styles.active : ''}`}
         onClick={onToggle}
@@ -36,14 +31,6 @@ const FilterSidebar = ({
             <h3>Filters & Sort</h3>
             <button className={styles.mobileClose} onClick={onToggle}>×</button>
           </div>
-          
-          {/* Mobile logout button */}
-          {/* <div className={styles.mobileLogoutSection}>
-            <button onClick={onLogout} className={styles.mobileLogoutButton}>
-              <span className={styles.logoutIcon}>👤</span>
-              Logout
-            </button>
-          </div> */}
           
           <div className={styles.sidebarSection}>
             <h4>Sort by Price</h4>
