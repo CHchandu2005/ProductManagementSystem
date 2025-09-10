@@ -108,7 +108,7 @@ const ProductListPage = ({ onLogout }) => {
         limit,
       };
       loadProducts(filters);
-    }, 300);
+    }, 150);
 
     return () => clearTimeout(timeoutId);
   }, [searchTerm, selectedCategories, sortBy, page, limit, loadProducts]);

@@ -9,6 +9,7 @@ const LoginPage = () => {
     email: 'admin@gmail.com',
     password: 'admin123'
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -24,8 +25,12 @@ const LoginPage = () => {
       toast.error('Please fill in all fields');
       return;
     }
-
-    await login(formData.email, formData.password);
+    try {
+      setIsLoading(true);
+      await login(formData.email, formData.password);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -74,8 +79,8 @@ const LoginPage = () => {
                 />
               </div>
               
-              <button type="submit" className={styles.loginBtn}>
-                Sign In
+              <button type="submit" className={styles.loginBtn} disabled={isLoading} aria-busy={isLoading}>
+                {isLoading ? 'Signing in…' : 'Sign In'}
               </button>
             </form>
             

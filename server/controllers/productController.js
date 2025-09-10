@@ -15,25 +15,6 @@ const uploadToCloudinary = (fileBuffer) => {
   });
 };
 
-// const getProducts = async (req, res) => {
-//   const { search, category, sort, order = "asc", skip = 0, limit = 10 } = req.query;
-//   let query = {};
-
-//   if (search) query.name = { $regex: search, $options: "i" };
-//   if (category) query.category = category;
-
-//   let products = Product.find(query);
-//   if (sort) products = products.sort({ [sort]: order === "asc" ? 1 : -1 });
-
-//   products = products.skip(Number(skip)).limit(Number(limit));
-
-//   const results = await products;
-//   const totalCount = await Product.countDocuments(query);
-
-//   res.json({ success: true, products: results, totalCount });
-// };
-
-
 const getProducts = async (req, res, next) => {
   console.log("get product function in backend hii");
 
