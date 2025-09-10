@@ -259,12 +259,14 @@ Frontend (`client/package.json`):
 ---
 
 ## Screenshots & Demos
-- Login page:
--  admin credentials submit to `/api/auth/login`.
+- Login page:admin credentials submit to `/api/auth/login`.
 - <img width="1892" height="936" alt="Screenshot (313)" src="https://github.com/user-attachments/assets/f299ddc4-2e3b-4edb-a1d4-a80d6272c24d" />
 - Products page: header with search, sidebar with filters/sort, grid of product cards, and pagination controls.
+- <img width="1891" height="950" alt="Screenshot (314)" src="https://github.com/user-attachments/assets/de531b44-a999-4554-8154-83f688626e08" />
+
 - Modals: add/edit product with image upload; delete confirmation.
 
----
+---<img width="1899" height="946" alt="Screenshot (315)" src="https://github.com/user-attachments/assets/bd6ad55c-e539-44fa-9009-e9391a8fdf81" />
+
 
 
