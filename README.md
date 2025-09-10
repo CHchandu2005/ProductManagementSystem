@@ -1,6 +1,6 @@
 ## Product Management System
 
-A full-stack MERN application to manage products with authentication, image uploads, filtering/sorting, and server-side pagination.
+A full-stack MERN application to manage products with CRUD Operations, authentication, image uploads, filtering/sorting, and server-side pagination.
 
 ### Architecture
 - **Frontend**: React + Vite, Context API for auth, CSS Modules for styling.
@@ -258,8 +258,10 @@ Frontend (`client/package.json`):
 
 ---
 
-## Screenshots & Demos (high-level)
-- Login page: admin credentials submit to `/api/auth/login`.
+## Screenshots & Demos
+- Login page:
+-  admin credentials submit to `/api/auth/login`.
+- <img width="1892" height="936" alt="Screenshot (313)" src="https://github.com/user-attachments/assets/f299ddc4-2e3b-4edb-a1d4-a80d6272c24d" />
 - Products page: header with search, sidebar with filters/sort, grid of product cards, and pagination controls.
 - Modals: add/edit product with image upload; delete confirmation.
 
