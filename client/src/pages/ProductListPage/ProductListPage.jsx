@@ -425,11 +425,11 @@ const ProductListPage = ({ onLogout }) => {
 
   // Pagination state
   const [page, setPage] = useState(1);
-  const [limit] = useState(5);
+  const [limit] = useState(6);
   const [totalPages, setTotalPages] = useState(1);
   const [totalItems, setTotalItems] = useState(0);
 
-  const categories = ['Electronics', 'Sports', 'Home & Kitchen'];
+  const categories = ['Electronics', 'Sports', 'Home & Kitchen','Fashion','Toys'];
 
   // ✅ Single data loader
   const loadProducts = useCallback(
@@ -637,9 +637,9 @@ const ProductListPage = ({ onLogout }) => {
 
       <div className={styles.container}>
         <div className={styles.breadcrumb}>
-          <span className={styles.breadcrumbItem}>Dashboard</span>
-          <span className={styles.breadcrumbSeparator}>/</span>
-          <span className={styles.breadcrumbItem}>Products</span>
+          {/* <span className={styles.breadcrumbItem}>Dashboard</span>
+          <span className={styles.breadcrumbSeparator}>/</span> */}
+          {/* <span className={styles.breadcrumbItem}>Products</span> */}
         </div>
 
         <div className={styles.headerSection}>

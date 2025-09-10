@@ -33,7 +33,7 @@ const LoginPage = () => {
       <div className={styles.loginContainer}>
         <div className={styles.loginImageSection}>
           <div className={styles.loginImageContent}>
-            <h1>ProductStore Pro</h1>
+            <h1>ProductStore</h1>
             <p>Professional inventory management for modern businesses</p>
           </div>
         </div>

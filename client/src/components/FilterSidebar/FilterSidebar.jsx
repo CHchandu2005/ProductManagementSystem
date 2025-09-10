@@ -20,9 +20,9 @@ const FilterSidebar = ({
 
   return (
     <>
-      <button className={styles.mobileMenuToggle} onClick={onToggle}>
+      {/* <button className={styles.mobileMenuToggle} onClick={onToggle}>
         ☰ Filters & Sort
-      </button>
+      </button> */}
       
       {/* Mobile overlay */}
       <div 
@@ -38,12 +38,12 @@ const FilterSidebar = ({
           </div>
           
           {/* Mobile logout button */}
-          <div className={styles.mobileLogoutSection}>
+          {/* <div className={styles.mobileLogoutSection}>
             <button onClick={onLogout} className={styles.mobileLogoutButton}>
               <span className={styles.logoutIcon}>👤</span>
               Logout
             </button>
-          </div>
+          </div> */}
           
           <div className={styles.sidebarSection}>
             <h4>Sort by Price</h4>
@@ -99,6 +99,12 @@ const FilterSidebar = ({
                 </label>
               ))}
             </div>
+          </div>
+          <div className={styles.mobileLogoutSection}>
+            <button onClick={onLogout} className={styles.mobileLogoutButton}>
+              <span className={styles.logoutIcon}>👤</span>
+              Logout
+            </button>
           </div>
         </div>
       </div>

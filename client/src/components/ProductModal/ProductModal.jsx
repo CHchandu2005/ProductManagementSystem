@@ -13,7 +13,7 @@ const ProductModal = ({ isOpen, onClose, onSubmit, product, isLoading = false })
     imagePreview: ''
   });
 
-  const categories = ['Electronics', 'Sports', 'Home & Kitchen'];
+  const categories = ['Electronics', 'Sports', 'Home & Kitchen','Fashion','Toys'];
 
   useEffect(() => {
     if (product) {
