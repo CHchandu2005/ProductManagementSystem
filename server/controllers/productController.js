@@ -15,6 +15,54 @@ const uploadToCloudinary = (fileBuffer) => {
   });
 };
 
+// const getProducts = async (req, res, next) => {
+//   console.log("get product function in backend hii");
+
+//   const { search, categories, sort, order = "asc" } = req.query;
+//   let { page = 1, limit = 3 } = req.query;
+//   page = Number(page) > 0 ? Number(page) : 1;
+//   limit = Number(limit) > 0 ? Number(limit) : 10;
+
+//   const query = {};
+
+//   if (search) {
+//     const regex = { $regex: search, $options: "i" };
+//     query.$or = [{ name: regex }, { description: regex }];
+//   }
+
+//   if (categories) {
+//     const decodedCategories = decodeURIComponent(categories)
+//       .split(",")
+//       .map((c) => c.trim());
+//     query.category = { $in: decodedCategories };
+//   }
+
+//   let productsQuery = Product.find(query);
+
+//   // Sorting (optional)
+//   if (sort) {
+//     const sortField = String(sort).replace("-", "");
+//     const sortOrder = order === "desc" ? -1 : 1;
+//     productsQuery = productsQuery.sort({ [sortField]: sortOrder });
+//   }
+
+//   const totalItems = await Product.countDocuments(query);
+//   const totalPages = Math.max(1, Math.ceil(totalItems / limit));
+//   const safePage = Math.min(page, totalPages);
+//   const skip = (safePage - 1) * limit;
+
+//   const products = await productsQuery.skip(skip).limit(limit);
+
+//   res.status(200).json({
+//     success: true,
+//     page: safePage,
+//     limit,
+//     totalPages,
+//     totalItems,
+//     products,
+//   });
+// };
+
 const getProducts = async (req, res, next) => {
   console.log("get product function in backend hii");
 
@@ -25,9 +73,9 @@ const getProducts = async (req, res, next) => {
 
   const query = {};
 
+  // ✅ Search only by name
   if (search) {
-    const regex = { $regex: search, $options: "i" };
-    query.$or = [{ name: regex }, { description: regex }];
+    query.name = { $regex: search, $options: "i" };
   }
 
   if (categories) {
@@ -62,6 +110,7 @@ const getProducts = async (req, res, next) => {
     products,
   });
 };
+
 
 
 
