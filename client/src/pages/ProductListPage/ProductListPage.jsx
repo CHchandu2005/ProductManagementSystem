@@ -271,7 +271,7 @@ const ProductListPage = ({ onLogout }) => {
                 </svg>
                 <input
                   type="text"
-                  placeholder="Search products by name or description..."
+                  placeholder="Search products by name..."
                   value={searchTerm}
                   onChange={(e) => handleSearchChange(e.target.value)}
                   className={styles.searchInput}

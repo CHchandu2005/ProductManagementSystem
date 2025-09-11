@@ -112,6 +112,10 @@ Open the URL shown by Vite (typically `http://localhost:5173`).
 
 ---
 
+Deployment Link
+
+🚀 Live Demo: https://pmsclient-beta.vercel.app/
+
 ## Database
 - Product schema (`server/models/Product.js`):
   - `name: String (required)`
